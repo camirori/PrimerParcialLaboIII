@@ -217,7 +217,7 @@ function armarGrilla(jsonStr){
 function updateRow(json){
     var tabla= document.getElementById('tCuerpo').getElementsByTagName('tr');
     for(var fila of tabla){
-        jsonTabla=JSON.parse(fila.lastChild.innerHTML);
+        var jsonTabla=JSON.parse(fila.lastChild.innerHTML);
         if(json['id']==jsonTabla['id']){
             fila.innerHTML='';
             fila.id='rowid'+json['id'];
@@ -233,7 +233,7 @@ function updateRow(json){
 function deleteRow(json){
     var tabla= document.getElementById('tCuerpo').getElementsByTagName('tr');
     for(var fila of tabla){
-        jsonTabla=JSON.parse(fila.lastChild.innerHTML);
+        var jsonTabla=JSON.parse(fila.lastChild.innerHTML);
         if(json['id']==jsonTabla['id']){
             document.getElementById('tCuerpo').removeChild(fila);
         }
