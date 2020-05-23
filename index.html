@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="./js/funciones.js" ></script>
+    <link rel="stylesheet" type="text/css" href="./css/estilos-base.css">
+
+</head>
+<body>
+  
+
+    <div class="contenedor fixed" id="cntrForm">
+        <button class="botonX" id="btnX">x</button><br/> 
+        <input type="hidden" name="id">   
+        <label for="inputNombre">Nombre</label><br/>
+        <input type="text" name="nombre" id="inputNombre"><br/>
+        <label for="inputCuatri">Cuatrimestre</label><br/>
+        <select name="cuatrimestre" id="inputCuatri" size="1" disabled>
+            <option value="1" selected disabled >1</option>
+            <option value="2" disabled >2</option>
+            <option value="3" disabled >3</option>
+            <option value="4" disabled >4</option>
+        </select><br/>
+        <label for="inputFecha">Fecha final</label><br/>
+        <input type="date" name="fechaFinal" id="inputFecha"><br/>
+        <label for="inputTurno">Turno</label><br/>
+        <input type="radio" name="turno" value="Mañana" checked/>Mañana<br/>
+        <input type="radio" name="turno" value="Noche"/>Noche<br/>
+        <input type="button" value="Eliminar" id="btnEliminar" style="float: left;" class="botonRojo">
+        <input type="button" value="Modificar" id="btnModificar" style="float: right;">
+    </div>
+
+    <h2>Lista de materias</h2>
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cuatrimestre</th>
+                <th>Fecha Final</th>
+                <th>Turno</th>
+            </tr>
+        </thead>
+        <tbody id="tCuerpo">       
+        </tbody>
+    </table>
+
+    <div class="overlay" id="spinnerCntr"><div class="spinner" id="spinner"></div></div>
+
+</body>
+</html>
